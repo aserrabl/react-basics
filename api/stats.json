@@ -1,0 +1,19 @@
+{
+  "daily": {
+    "revenue": {
+      "yesterday": 10598.56,
+      "today": 7648.43,
+      "comparison": 30
+    },
+    "profit": {
+      "yesterday": 16598.56,
+      "today": 9648.43,
+      "comparison": -4
+    }
+  },
+  "monthly": {
+    "profit": 967398.31,
+    "daily_average": 5404.2,
+    "comparison": 20
+  }
+}
