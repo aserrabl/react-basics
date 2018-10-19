@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import './Block.css';
 
 class Block extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {collapsed: false};
   }
 
@@ -20,24 +20,13 @@ class Block extends Component {
           </div>
         </div>
         <div className={'columns'}>
-          <div className={'column'}>
-            <label>Revenue Yesterday</label>
-            <div className={'number'}>1234 €</div>
-          </div>
-          <div className={'column'}>
-            <label>Revenue Today</label>
-            <div className={'number'}>5678 €</div>
-          </div>
-          <div className={'column'}>
-            <label>Against yesterday at this time</label>
-            <div className={'percentage'}>
-              <div className={'icon'}>v</div>
-              <div className={'number'}>4%</div>
-            </div>
-          </div>
+          {this.props.columns.map((el) =>
+            (<div className={'column'}>
+              <label>{el.text}</label>
+              <div className={'number'}>{el.number} €</div>
+            </div>))}
         </div>
-      </div>
-    );
+      </div>)
   }
 }
 
