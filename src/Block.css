@@ -1,0 +1,41 @@
+.header-block {
+    text-align: right;
+}
+
+.collapse {
+    padding: 0 8px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #282c34;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+.columns {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    padding: 8px;
+}
+
+.percentage {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-size: 16px;
+}
+
+.block.collapsed {
+    color: red;
+    height: 40px;
+    overflow: hidden;
+}

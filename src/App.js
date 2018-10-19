@@ -1,53 +1,19 @@
-import React, {Component} from 'react';
-import classNames from 'classnames';
+import React from 'react';
 import './App.css';
+import Block from "./Block";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {collapsed: false};
-  }
+const App = () =>
+  (<div className="App">
+    <header className="App-header">
+      <span>Header</span>
+      <div>Username</div>
+    </header>
+    <div className={'wrapper'}>
+      <Block/>
+      <Block/>
+      <Block/>
+    </div>
+  </div>);
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <span>Header</span>
-          <div>Username</div>
-        </header>
-        <div className={'wrapper'}>
-          {/*Revenue block*/}
-          <div className={classNames('block', {'collapsed': this.state.collapsed})}>
-            <div className={'header-block'}>
-              <div className={'collapse'}
-                onClick={() => {
-                  this.setState({collapsed: !this.state.collapsed})
-                }}>
-                {this.state.collapsed ? '+' : '-'}
-              </div>
-            </div>
-            <div className={'columns'}>
-              <div className={'column'}>
-                <label>Revenue Yesterday</label>
-                <div className={'number'}>1234 €</div>
-              </div>
-              <div className={'column'}>
-                <label>Revenue Today</label>
-                <div className={'number'}>5678 €</div>
-              </div>
-              <div className={'column'}>
-                <label>Against yesterday at this time</label>
-                <div className={'percentage'}>
-                  <div className={'icon'}>v</div>
-                  <div className={'number'}>4%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
 
 export default App;
